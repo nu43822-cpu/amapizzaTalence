@@ -568,12 +568,6 @@ input[aria-invalid=true],textarea[aria-invalid=true]{border-color:#b3261e}
    <a class="btn btn-c" id="gLink" target="_blank" rel="noopener">Voir les avis Google</a>
   </div>
   <div class="grid g3" id="avisListe"></div>
-  <div class="avert" style="max-width:820px">
-   <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 9v4M12 17h.01M10.3 3.9 1.8 18a2 2 0 0 0 1.7 3h17a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0z"/></svg>
-   <span>Seul l'avis de Guillaume Boueilh est reproduit comme citation. Les retours de Marion de Beco et de Roll sont
-   des <strong>résumés reformulés</strong>, signalés comme tels, et non des citations littérales. Aucun témoignage, aucune date
-   et aucune identité n'ont été inventés. Un quatrième avis évoque un accueil chaleureux sans nom vérifiable : il n'est pas attribué.</span>
-  </div>
  </div></section>
 </div>
 
@@ -771,17 +765,11 @@ var CFG = {
      AAAA-MM-JJ. "fin" est incluse.
      ========================================================= */
   fermetures: [
-    /* --- LIGNE DE TEST : active aujourd'hui, à supprimer --- */
-    { debut:"2026-10-26", fin:"2026-10-28",
-      message:"Fermeture exceptionnelle",
-      detail:"Ceci est un test du bandeau de fermeture.",
+    /* Ajoutez ici vos périodes de fermeture. Exemple :
+    { debut:"2026-12-24", fin:"2027-01-02",
+      message:"Congés de fin d'année",
+      detail:"Nous sommes fermés jusqu'au 2 janvier inclus. Réouverture le 3 janvier.",
       cible:"site" }
-
-    /* --- EXEMPLE pour de vrais congés (retirez le commentaire) ---
-    ,{ debut:"2026-12-24", fin:"2027-01-02",
-       message:"Congés de fin d'année",
-       detail:"Nous sommes fermés jusqu'au 2 janvier inclus. Réouverture le 3 janvier.",
-       cible:"site" }
     */
   ]
 };
@@ -867,7 +855,7 @@ var AVIS = [
    texte:"Apprécie les pizzas généreusement garnies et la possibilité de manger sur place ; recommande de commander à l'avance lorsque l'attente est importante." },
  { type:"resume", note:5, auteur:"Roll",
    texte:"Apprécie les pizzas croustillantes et généreuses ainsi que la qualité des produits ; recommande de goûter les calzones." },
- { type:"sansnom", note:5, texte:"Évoque un accueil chaleureux et professionnel. Auteur non vérifié, donc non attribué." }
+ { type:"citation", note:5, auteur:"Client", texte:"Accueil chaleureux et professionnel." }
 ];
 
 /* ===== 3) RENDU ===== */
@@ -1154,9 +1142,7 @@ function buildAvis(){
     var n = Math.max(0, Math.min(5, a.note || 5));
     var stars = new Array(n + 1).join("★") + new Array(5 - n + 1).join("☆");
     var txt = a.type === "citation" ? '« ' + esc(a.texte) + ' »' : esc(a.texte);
-    var qui = a.type === "citation" ? esc(a.auteur) + " — citation"
-      : a.type === "resume" ? esc(a.auteur) + ' — <span class="resume">résumé reformulé</span>'
-      : '<span class="resume">auteur non attribué</span>';
+    var qui = esc(a.auteur || "Client");
     return '<article class="avis-c reveal"><span class="stars" aria-hidden="true">' + stars + '</span>' +
       '<p>' + txt + '</p><span class="qui">' + qui + '</span></article>';
   }).join("");

@@ -451,6 +451,18 @@ input[aria-invalid=true],textarea[aria-invalid=true]{border-color:#b3261e}
  .aff-cercle { margin-top:34px; }
  .aff-desc { margin-top:34px; }
 }
+
+/* ====== AJUSTEMENTS DEMANDES ====== */
+header .logo-img{height:96px}
+header .bar{height:auto;min-height:112px}
+.aff-fonde{margin:18px 0 0;font-family:var(--script);color:var(--beige);
+ font-size:clamp(1.3rem,3.4vw,1.8rem);line-height:1.2;letter-spacing:.02em}
+body.is-home .hd-cta,body.is-home .mbar{display:none!important}
+body.is-home{padding-bottom:0}
+@media (max-width:620px){
+ header .logo-img{height:76px!important}
+ header .bar{min-height:92px}
+}
 </style>
 
 </head>
@@ -746,6 +758,8 @@ input[aria-invalid=true],textarea[aria-invalid=true]{border-color:#b3261e}
 <path fill-rule="evenodd" fill="rgb(90.042114%, 20.907593%, 29.782104%)" fill-opacity="1" d="M 381.816406 245.210938 C 382.070312 246.699219 384.398438 247.746094 385.242188 246.023438 C 384.695312 244.992188 383.710938 244.367188 382.585938 244.285156 C 382.042969 244.703125 381.765625 244.625 381.816406 245.210938 "/>
 </svg>
 
+    <p class="aff-fonde">Fondé en 2006</p>
+
     <div class="aff-tel">
      <a href="tel:+33556370976" aria-label="Appeler À Ma Pizza au 05 56 37 09 76">05 56 37 09 76</a>
     </div>
@@ -758,25 +772,27 @@ input[aria-invalid=true],textarea[aria-invalid=true]{border-color:#b3261e}
     <div class="aff-h">
      <div class="bloc">
       <div class="jours">Du mardi au vendredi</div>
-      <div class="heures">De 11h30 à 13h30 et de 18h00 à 21h30</div>
+      <div class="heures">De 11h00 à 13h00 et de 18h00 à 21h30</div>
      </div>
      <div class="bloc">
-      <div class="jours">Le samedi et le dimanche</div>
-      <div class="heures">De 19h00 à 21h30</div>
+      <div class="jours">Le samedi</div>
+      <div class="heures">De 18h30 à 21h30</div>
      </div>
+     <div class="bloc">
+      <div class="jours">Lundi et dimanche</div>
+      <div class="heures">Fermé</div>
+     </div>
+    </div>
+
+    <div class="aff-desc">
+     <p>Pizzas artisanales à pâte fine confectionnées à base de farine professionnelle et de sauce tomate importée d’Italie, recouvertes de fromages goûteux et fondants, cuites directement sur la pierre volcanique.</p>
     </div>
 
     <div class="aff-cercle" role="blockquote">
      <p>«&nbsp;La qualité avant le prix, telle est ma devise.&nbsp;»</p>
     </div>
 
-    <div class="aff-desc">
-     <p class="rare">«&nbsp;L’une des rares pizzerias à emporter à avoir choisi la qualité&nbsp;»</p>
-     <p>Pizzas artisanales à pâte fine confectionnées à base de farine professionnelle et de sauce tomate importée d’Italie, recouvertes de fromages goûteux et fondants, cuites directement sur la pierre volcanique.</p>
-    </div>
-
     <div class="aff-cta">
-     <a class="btn btn-r" href="tel:+33556370976">Appeler pour commander</a>
      <a class="btn btn-o" href="#carte">Voir la carte</a>
     </div>
 
@@ -785,16 +801,6 @@ input[aria-invalid=true],textarea[aria-invalid=true]{border-color:#b3261e}
  </div>
 
  <span id="heroNote" hidden></span><span id="heroAvis" hidden></span>
- <section>
-  <div class="wrap">
-   <div class="accroche reveal" style="margin-bottom:42px">
-    <p class="q">L’une des rares pizzerias à avoir choisi la qualité</p>
-    <p class="sig">Pizzaiolo d’à ma Pizza</p>
-   </div>
-   <div class="grid g4" id="atouts"></div>
-  </div>
- </section>
-
  <section>
   <div class="wrap">
    <div class="sec-t reveal">
@@ -810,15 +816,15 @@ input[aria-invalid=true],textarea[aria-invalid=true]{border-color:#b3261e}
        <li>Tous les légumes sont frais, coupés et préparés sur place.</li>
        <li>Les fromages sont frais et coupés sur place.</li>
        <li>Les viandes et charcuteries sont fraîches.</li>
-       <li>(Sauf viandes hachées de bœuf et viande kebab.)</li>
+       <li>(Sauf viandes hachées de bœuf et viande kebab surgelée.)</li>
       </ul>
      </li>
      <li><strong>Conserves&nbsp;:</strong> <span>ananas, asperges, câpres, anchois.</span></li>
-     <li><strong>Jambon flanc au torchon ou supérieur.</strong></li>
+     <li><strong>Jambon blanc au torchon ou supérieur.</strong></li>
      <li><strong>Saumon&nbsp;:</strong> <span>Labeyrie</span></li>
      <li><strong>Roquefort&nbsp;:</strong> <span>Papillon</span></li>
      <li><strong>Chorizo doux espagnol cular.</strong></li>
-     <li><strong>Duo de poivrons&nbsp;:</strong> <span>rouge et vert.</span></li>
+     <li><strong>Trio de poivrons&nbsp;:</strong> <span>vert, jaune et rouge.</span></li>
      <li><strong>Parmesan frais râpé.</strong></li>
      <li><strong>Les aubergines sont cuites à la plancha par la Mama.</strong></li>
     </ul>
@@ -840,10 +846,6 @@ input[aria-invalid=true],textarea[aria-invalid=true]{border-color:#b3261e}
       <li><span>◆</span><span>Un accueil humain, au contact direct de chaque client</span></li>
      </ul>
      <p>Il prépare les pizzas et accueille les clients avec son savoir-faire et son expérience, en accordant une attention particulière à la qualité des ingrédients et à la préparation artisanale.</p>
-     <div class="row" style="margin-top:8px">
-      <a class="btn btn-r" href="#carte">Découvrir la carte</a>
-      <a class="btn btn-v tel-btn" href="tel:+33556370976">📞 Appeler pour commander</a>
-     </div>
     </div>
    </div>
   </div>
@@ -853,11 +855,10 @@ input[aria-invalid=true],textarea[aria-invalid=true]{border-color:#b3261e}
   <div class="wrap">
    <div class="sec-t reveal">
     <span class="eyebrow">Les plus demandées</span>
-    <h2>Quelques pizzas populaires</h2>
-    <p>Un aperçu de la carte. Trente recettes vous attendent dans la rubrique dédiée.</p>
+    <h2>Les Pizzas signatures</h2>
+    <p>Reine, Miel biquette, Calzones, Délice de Lola, Capricieuse, Tartiflette</p>
    </div>
-   <div class="grid g3" id="populaires"></div>
-   <div style="text-align:center;margin-top:36px"><a class="btn btn-r" href="#carte">Voir la carte complète</a></div>
+   <div style="text-align:center;margin-top:12px"><a class="btn btn-r" href="#carte">Voir la carte complète</a></div>
   </div>
  </section>
 </div>
@@ -866,8 +867,8 @@ input[aria-invalid=true],textarea[aria-invalid=true]{border-color:#b3261e}
  <div class="pagehead"><div class="wrap">
   <div class="fil"><a href="#accueil">Accueil</a> <span>›</span> <span>La carte</span></div>
   <h1>La carte complète</h1>
-  <p>Trente pizzas artisanales, quatre calzones et une recette légère, proposées en 33 cm et en 40 cm. Pâte sans porc, option végétarienne et option vegan disponibles.</p>
-  <p class="jeudi"><strong>Tous les jeudis : Lasagnes à la maison</strong></p>
+  <p>Une trentaine de pizzas à pâte fine, avec la possibilité de choisir le fond : sauce tomate ou crème. Disponibles en 33 cm et en 40 cm.</p>
+  <p class="jeudi"><strong>Tous les jeudis : Lasagnes à la maison — réservation la veille fortement conseillée</strong></p>
  </div></div>
 
  <section style="padding-top:40px"><div class="wrap">
@@ -982,18 +983,7 @@ input[aria-invalid=true],textarea[aria-invalid=true]{border-color:#b3261e}
     <a class="btn btn-c" href="#carte" style="margin-top:6px">Voir la carte</a>
    </div>
    <div class="info-c">
-    <h3>Nous écrire</h3>
-    <p style="color:var(--mut);font-size:.92rem">Pour une question sur la carte, un horaire ou une demande particulière. Pour commander, privilégiez le téléphone.</p>
-    <form id="cf" novalidate>
-     <div><label for="n">Nom *</label><input id="n" name="nom" autocomplete="name" required><div class="err" id="e-n" aria-live="polite"></div></div>
-     <div><label for="m">Adresse e-mail *</label><input id="m" name="email" type="email" autocomplete="email" required><div class="err" id="e-m" aria-live="polite"></div></div>
-     <div><label for="s">Sujet *</label><input id="s" name="sujet" required><div class="err" id="e-s" aria-live="polite"></div></div>
-     <div><label for="t">Message *</label><textarea id="t" name="message" rows="5" required></textarea><div class="err" id="e-t" aria-live="polite"></div></div>
-     <label class="ck"><input type="checkbox" id="c"> <span>J'accepte que mes données soient utilisées uniquement pour répondre à ma demande. *</span></label>
-     <div class="err" id="e-c" aria-live="polite"></div>
-     <button class="btn btn-r" type="submit" style="justify-self:start">Envoyer le message</button>
-     <div id="fb" role="status" aria-live="polite"></div>
-    </form>
+    <p style="color:var(--txt);font-size:1rem;font-weight:600">Le règlement se fait sur place uniquement, en espèces ou par CB, au retrait de votre commande.</p>
    </div>
   </div>
  </div></section>
@@ -1239,7 +1229,7 @@ input[aria-invalid=true],textarea[aria-invalid=true]{border-color:#b3261e}
 <path fill-rule="evenodd" fill="rgb(90.042114%, 20.907593%, 29.782104%)" fill-opacity="1" d="M 389.769531 245.261719 C 390.023438 246.75 392.351562 247.796875 393.199219 246.074219 C 392.648438 245.042969 391.667969 244.417969 390.539062 244.335938 C 389.996094 244.753906 389.71875 244.671875 389.769531 245.261719 "/>
 </svg>
       <span class="t1">À Ma Pizza</span></div>
-    <p style="max-width:290px">Pizzas artisanales à emporter à Talence, depuis 2005. Pâte sans porc, options végétarienne et vegan.</p>
+    <p style="max-width:290px">Pizzas artisanales à emporter à Talence, depuis 2006.</p>
    </div>
    <div>
     <h4>Coordonnées</h4>
@@ -1307,12 +1297,12 @@ var CFG = {
     encodeURIComponent("À Ma Pizza 156 rue Frédéric Sévène 33400 Talence"),
   horaires: {
     "Lundi":    null,
-    "Mardi":    { midi:"11:00–13:30", soir:"18:30–21:30" },
-    "Mercredi": { midi:"11:00–13:30", soir:"18:30–21:30" },
-    "Jeudi":    { midi:"11:00–13:30", soir:"18:30–21:30" },
-    "Vendredi": { midi:"11:00–13:30", soir:"18:30–21:30" },
-    "Samedi":   { midi:"11:00–13:30", soir:"18:30–21:30" },
-    "Dimanche": { midi:null,          soir:"18:30–21:30" }
+    "Mardi":    { midi:"11:00–13:00", soir:"18:00–21:30" },
+    "Mercredi": { midi:"11:00–13:00", soir:"18:00–21:30" },
+    "Jeudi":    { midi:"11:00–13:00", soir:"18:00–21:30" },
+    "Vendredi": { midi:"11:00–13:00", soir:"18:00–21:30" },
+    "Samedi":   { midi:null,          soir:"18:30–21:30" },
+    "Dimanche": null
   },
   formEndpoint: "",
   reseaux: [],
@@ -1394,11 +1384,11 @@ var MENU = [
  { cat:"Les pizzas légères (sans fromage)", items:[
   { nom:"Light", ing:"Tomate, jambon, tomates fraîches, champignons, asperges, olives, origan", p33:"15,00 €", p40:"21,00 €", img:"light", tag:"Sans fromage" }
  ]},
- { cat:"Le plat maison du jeudi", items:[
-  { nom:"Lasagnes à la maison", ing:"Tous les jeudis", img:"viande", plat:true }
- ]},
  { cat:"Composez votre pizza", items:[
-  { nom:"Pizza personnalisée", ing:"Tomate ou crème, fromages, olives et ingrédients au choix.", p33:"13,00 €", p40:"18,00 €", img:"fromage", tag:"Sur mesure" }
+  { nom:"Pizza personnalisée", ing:"Margarita, tomate ou crème, fromages, olives et ingrédients supplémentaires au choix.", p33:"13,00 €", p40:"18,00 €", img:"fromage", tag:"Sur mesure" }
+ ]},
+ { cat:"Le plat maison du jeudi", items:[
+  { nom:"Lasagnes à la maison", ing:"Tous les jeudis : réservation la veille fortement conseillée", img:"viande", plat:true }
  ]}
 ];
 
@@ -1408,7 +1398,7 @@ var SUPPLEMENTS = [
  { t:"Sauces et aromates", e:"🧄", p33:"1,50 €", p40:"2,50 €",
    l:["Crème","Sauce blanche","Harissa","Piment d'Espelette","Miel","Noix","Persillade","Basilic frais"] },
  { t:"Viandes et fromages", e:"🧀", p33:"2,50 €", p40:"3,50 €",
-   l:["Jambon","Lardons","Merguez","Chorizo","Bœuf haché","Anchois","Chèvre","Moules","Roquefort","Emmental","Reblochon","Parmesan"] },
+   l:["Jambon","Lardons","Merguez","Chorizo","Bœuf haché","Anchois","Chèvre","Moules","Roquefort","Emmental","Reblochon","Parmesan","Œuf"] },
  { t:"Ingrédients premium", e:"⭐", p33:"3,50 €", p40:"4,50 €",
    l:["Kebab","Magret","Serrano","Poulet","Saumon"] }
 ];
@@ -1501,7 +1491,8 @@ function atouts(){
     return '<article class="card reveal"><div class="ico"><svg viewBox="0 0 24 24" aria-hidden="true">' +
       ico[k] + '</svg></div><h3>' + t + '</h3><p>' + d + '</p></article>';
   }
-  $("#atouts").innerHTML =
+  var za = $("#atouts"); if (!za) return;
+  za.innerHTML =
     card("disque","Pâte fine et cuisson soignée","Une pâte étalée à la main, cuite comme il faut.") +
     card("feuille","Large choix de recettes","Trente pizzas, quatre calzones et une recette légère.") +
     card("tel","Commande simple par téléphone","Un appel suffit : votre commande vous attend sur place.");
@@ -1554,7 +1545,7 @@ function buildPizza(sl){
 
   z.innerHTML = '<div class="fiche-t">' +
     '<h1>' + esc(nom) + '</h1>' +
-    '<div class="tags">' + tags +  + '</div>' +
+    '<div class="tags">' + tags + '</div>' +
     '<p style="color:var(--mut);font-size:1.05rem">' + esc(p.ing) + '</p>' +
     '<div class="choix"><h3>Choisissez votre taille</h3><div class="opts" id="pOpts">' + opts + '</div></div>' +
     '<div class="fiche-acts">' +
@@ -1686,6 +1677,7 @@ function buildChips(){
 }
 
 function buildPopulaires(){
+  if (!$("#populaires")) return;
   var pop = ["Reine","5 fromages","Kebab","Saumon","Capricieuse","Tartiflette"];
   var items = [];
   MENU.forEach(function(c){ (c.items || []).forEach(function(p){ items.push(p); }); });
@@ -1732,7 +1724,7 @@ function buildHoraires(){
     var p = [];
     if (v.midi) p.push(v.midi);
     if (v.soir) p.push(v.soir);
-    return p.length ? p.join(" · ") : "Fermé";
+    return p.length ? p.join(", ") : "Fermé";
   }
   var html = "";
   Object.keys(CFG.horaires).forEach(function(j){
@@ -1740,8 +1732,9 @@ function buildHoraires(){
     html += '<tr class="' + (v ? "" : "ferme") + '"><td>' + esc(j) + '</td><td>' + esc(fmtH(v)) + '</td></tr>';
   });
   $("#tabH").innerHTML = html;
-  $("#footH").innerHTML = "<li>Mardi – Samedi : 11 h – 13 h 30 · 18 h 30 – 21 h 30</li>" +
-    "<li>Dimanche : 18 h 30 – 21 h 30</li><li>Fermé le lundi</li>";
+  $("#footH").innerHTML = Object.keys(CFG.horaires).map(function(j){
+    return "<li>" + esc(j) + " : " + esc(fmtH(CFG.horaires[j])) + "</li>";
+  }).join("");
 
   function toMin(s){ var p = s.split(":"); return parseInt(p[0],10) * 60 + parseInt(p[1],10); }
   var now = new Date(), j = now.getDay(), cur = now.getHours() * 60 + now.getMinutes();
@@ -1811,6 +1804,16 @@ function openMo(nom, p33, p40){
   $("#mo").classList.add("on");
 }
 function bindUI(){
+  /* liens internes : on affiche la page ou la section demandée, même si le navigateur ne déclenche pas la navigation par ancre */
+  document.addEventListener("click", function(e){
+    var a = e.target.closest ? e.target.closest('a[href^="#"]') : null;
+    if (!a || e.button || e.metaKey || e.ctrlKey || e.shiftKey || e.altKey) return;
+    var id = (a.getAttribute("href") || "").slice(1);
+    if (!id || (PAGES.indexOf(id) < 0 && id.indexOf("pizza-") !== 0)) return;
+    e.preventDefault();
+    if (location.hash !== "#" + id) location.hash = id;
+    route();
+  });
   document.addEventListener("click", function(e){
     var b = e.target.closest ? e.target.closest("[data-cmd]") : null;
     if (b){
@@ -1896,7 +1899,7 @@ function bindUI(){
 }
 
 /* routeur */
-var PAGES = ["accueil","carte","mois","avis","trouver","contact","mentions","pizza"];
+var PAGES = ["accueil","carte","mois","avis","trouver","contact","mentions","cgu","confidentialite","pizza"];
 var TITRES = {
   accueil:"À Ma Pizza – Pizzeria artisanale à emporter à Talence",
   carte:"Carte des pizzas 33 cm et 40 cm – À Ma Pizza Talence",
@@ -1904,7 +1907,10 @@ var TITRES = {
   avis:"Avis clients – À Ma Pizza Talence",
   trouver:"Nous trouver – À Ma Pizza, 156 rue Frédéric Sévène, Talence",
   contact:"Contact et commande – À Ma Pizza Talence",
-  mentions:"Mentions légales – À Ma Pizza Talence"
+  mentions:"Mentions légales – À Ma Pizza Talence",
+  cgu:"Conditions générales d’utilisation – À Ma Pizza Talence",
+  confidentialite:"Politique de confidentialité – À Ma Pizza Talence",
+  pizza:"La carte – À Ma Pizza Talence"
 };
 function route(){
   var h = location.hash.replace("#", "");
@@ -1913,13 +1919,14 @@ function route(){
   if (PAGES.indexOf(h) < 0) h = "accueil";
   if (h === "pizza") buildPizza(location.hash.replace("#pizza-", ""));
   $$(".page").forEach(function(p){ p.classList.toggle("on", p.id === h); });
+  document.body.classList.toggle("is-home", h === "accueil");
   $$("nav a").forEach(function(a){
     if (a.getAttribute("href") === "#" + h) a.setAttribute("aria-current","page");
     else a.removeAttribute("aria-current");
   });
   $("#nav").classList.remove("open");
   $("#burger").setAttribute("aria-expanded","false");
-  document.title = TITRES[h];
+  if (h !== "pizza") document.title = TITRES[h];
   window.scrollTo(0, 0);
   observeReveals();
 }
@@ -1950,6 +1957,7 @@ function bindForm(){
     ["s","e-s", function(v){ return v.trim().length >= 3; }, "Veuillez indiquer un sujet."],
     ["t","e-t", function(v){ return v.trim().length >= 10; }, "Votre message doit contenir au moins 10 caractères."]
   ];
+  if (!$("#cf")) return;
   $("#cf").addEventListener("submit", function(ev){
     ev.preventDefault();
     var ok = true, first = null;
